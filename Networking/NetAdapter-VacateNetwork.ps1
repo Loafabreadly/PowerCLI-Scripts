@@ -1,4 +1,4 @@
-﻿# Version 1.3
+﻿# Version 1.4
 # Developed by Brad Snurka <bsnurka@vmware.com>
 # USAGE: Run Powershell script, provide vCenter FQDN, CloudAdmin Credentials, Source & Target Network
 
