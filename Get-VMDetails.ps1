@@ -1,4 +1,4 @@
-﻿# Version 1.0
+# Version 1.0
 # Developed by Brad Snurka <bsnurka@vmware.com>
 # USAGE: Run Powershell script, provide vCenter FQDN, CloudAdmin Credentials, Source VM name
 # RESULT: Outputs Name, PowerState, CPU, Memory in GB, and VM Folder
