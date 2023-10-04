@@ -11,7 +11,7 @@ $pass = Read-Host -Prompt "Enter the Cloudadmin@vmc.local password"
 
 clear
 
-$server = Connect-VIServer -Server $server -User cloudadmin@vmc.local -Password $pass
+$server = Connect-VIServer -Server $vCenterServer -User cloudadmin@vmc.local -Password $pass
 Write-Host Connected to the vCenter Server successfully.`n
 
 # Define the vCenter token
