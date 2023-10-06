@@ -1,7 +1,7 @@
-﻿# Version 1.0
+﻿# Version 1.1
 # Developed by Brad Snurka <bsnurka@vmware.com>
 # USAGE: Run Powershell script, select the option you want from the given list
-# RESULT: Provides the current users in CloudAdminGroup, and allows for ADD/REMOVE operations to the CloudAdminGroup
+# RESULT: Provides the current groups in CloudAdminGroup, and allows for ADD/REMOVE operations to the CloudAdminGroup
 
 clear
 # Define the vCenter server URL
