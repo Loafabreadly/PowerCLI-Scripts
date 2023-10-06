@@ -13,6 +13,7 @@ clear
 
 $server = Connect-VIServer -Server $vCenterServer -User cloudadmin@vmc.local -Password $pass
 Write-Host Connected to the vCenter Server successfully.`n
+Write-Host A reminder that only AD Groups can be added to the Cloudadmingroup. If a specific user needs the permissions, they need to be added as part of an AD Group.
 
 # Define the vCenter token
 $vCenterToken = $server.GetCisSessionId()
@@ -71,7 +72,7 @@ while (-not $exitRequested) {
     switch ($choice) {
         "GET" {
             $administrators = GetAdministrators
-            Write-Host "`nCurrent Administrators:"
+            Write-Host "`nCurrent AD Groups in the CloudAdminGroup:"
             $administrators | ForEach-Object { Write-Host $_ }
             Write-Host
             Read-Host "Press ENTER to continue"
@@ -93,6 +94,7 @@ while (-not $exitRequested) {
         }
         default {
             Write-Host "`nInvalid choice. Please select from the available options."
+            Read-Host "Press ENTER to continue"
         }
     }
     clear
