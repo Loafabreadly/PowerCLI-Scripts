@@ -3,7 +3,7 @@
 # USAGE: Run Powershell script, select the option you want from the given list
 # RESULT: Provides the current groups in CloudAdminGroup, and allows for ADD/REMOVE operations to the CloudAdminGroup
 
-clear
+Clear-Host
 # Define the vCenter server URL
 if ( $null -eq $env:VMC_VCENTER_URL) {
     $vCenterServer = Read-Host -Prompt "Please input the VC URL (EX: vcenter.sddc-xx-xxx-xxx-xxx.vmwarevmc.com)"
@@ -20,7 +20,7 @@ else {
 }
 
 
-clear
+Clear-Host
 
 $server = Connect-VIServer -Server $vCenterServer -User cloudadmin@vmc.local -Password $pass
 Write-Host Connected to the vCenter Server successfully.`n
@@ -108,7 +108,7 @@ while (-not $exitRequested) {
             Read-Host "Press ENTER to continue"
         }
     }
-    clear
+    Clear-Host
 }
 Disconnect-VIServer -Confirm:$false
 Write-Host `nCleaned up vCenter Server Connection.
