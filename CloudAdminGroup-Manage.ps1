@@ -5,8 +5,19 @@
 
 clear
 # Define the vCenter server URL
-$vCenterServer = Read-Host -Prompt "Please input the VC URL (EX: vcenter.sddc-xx-xxx-xxx-xxx.vmwarevmc.com)"
-$pass = Read-Host -Prompt "Enter the Cloudadmin@vmc.local password"
+if ( $null -eq $env:VMC_VCENTER_URL) {
+    $vCenterServer = Read-Host -Prompt "Please input the VC URL (EX: vcenter.sddc-xx-xxx-xxx-xxx.vmwarevmc.com)"
+}
+else {
+    $vCenterServer = $env:VMC_VCENTER_URL
+}
+
+if ( $null -eq $env:VMC_VCENTER_PASSWORD) {
+    $pass = Read-Host -Prompt "Enter the Cloudadmin@vmc.local password"
+}
+else {
+    $pass = $env:VMC_VCENTER_PASSWORD
+}
 
 
 clear
